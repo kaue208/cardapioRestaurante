@@ -1,0 +1,271 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dela+Gothic+One&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    overflow-x: hidden;
+}
+
+header {
+    width: 100vw;
+    height:100px;
+    background-color: #A82323;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+}
+
+.logo {
+    width: 87px;
+}
+
+.pesquisa {
+    width: 40px;
+}
+
+nav ul{
+    display: flex;
+    gap: 20px;
+    list-style: none;
+    background-color: rgba(33, 33, 33, 0.464);
+    padding: 15px;
+    font-size: 18px;
+    font-family: 'Inter', sans-serif;
+    border-radius: 10px;
+    width: 400px;
+    justify-content: center;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25)); 
+}
+
+
+
+nav a {
+    text-decoration: none;
+    color:rgb(255, 255, 255)
+}
+
+nav a:hover {
+    color: #A82323;
+    transition: 0.3s;
+}
+
+.banner {
+    width: 100vw;
+    height: 100vh;
+    background-color: #2A5C30;
+    padding: 20px;
+    font-family: 'Dela Gothic One', cursive;
+    color: #FFFFFF;
+    font-size: 30px;
+    
+}
+
+.pizza {
+    display: flex;
+    padding: 20px;
+    justify-content: center;
+    animation: fade 1s ease-in-out;
+}
+
+.pizza img {
+    width: 500px;
+    border-radius: 10px;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25)); 
+    display: flex;
+}
+
+.cardapio {
+    background-color: #2A5C30;
+    padding: 20px;
+    width: 100vw;
+    height: 100vh;
+}
+
+.cardapio h2 {
+    font-family: 'Dela Gothic One', cursive;
+    color: #FFFFFF;
+    font-size: 30px;
+    text-align: center;
+    margin-bottom: 20px;
+    padding: 20px;
+    margin-top: 90px;
+}
+
+.cardapio-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    justify-items: center;
+    align-items: center;
+}
+
+.cardapio-item:hover {
+    transform: scale(1.05);
+    transition: 0.3s;
+    background-color: #a72a2a;
+}
+.cardapio-item {
+    background-color: #A82323;
+    width: 90%;
+    height: 100%;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: #FFFFFF;
+    font-family: 'Inter', sans-serif;
+    font-size: 18px;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25)); 
+    padding: 20px;
+    gap: 10px;
+}
+
+.contato {
+    background-color: #2A5C30;
+    width: 100vw;
+    height: 100vh;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    
+}
+
+.contato-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px;
+}
+
+.sobre {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    font-family: 'dela gothic one', cursive;
+    color: #FFFFFF;
+    font-size: 18px;
+}
+
+.contato-container h2 {
+    font-family: 'Dela Gothic One', cursive;
+    color: #FFFFFF;
+    font-size: 30px;
+}
+
+.contato-foto {
+    width: -100px;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25)); 
+}
+
+.contato-foto img {
+    width: auto;
+    height: 100%;
+    display: block;
+    border-radius: 10px;
+}
+
+@keyframes fade {
+    from {
+        transform: translateY(-100px);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+
+.btn-cardapio {
+    background-color: #A82323;
+    color: #FFFFFF;
+    border: none;
+    padding: 10px;
+    font-size: 18px;
+    font-family: 'Inter', sans-serif;
+    border-radius: 5px;
+    cursor: pointer;
+    display: flex;
+    margin: 20px auto;
+}
+
+.btn-cardapio:hover {
+    background-color: #a72a2a;
+    transition: 0.3s;
+    transform: scale(1.05);
+}
+
+
+dialog {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 20px;
+    border: none;
+    border-radius: 10px;
+    width: min(95vw, 700px);
+    max-width: 700px;
+    max-height: 90vh;
+    overflow: auto;
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.dialog-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+    flex-direction: column;
+    gap: 20px;
+}
+
+dialog img {
+    width: 100%;
+    max-width: 320px;
+    height: auto;
+    border-radius: 10px;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25)); 
+}
+
+dialog p {
+    font-family: 'Inter', sans-serif;
+    color: #333333;
+    font-size: 18px;
+    text-align: center;
+}
+
+dialog button {
+    background-color: #A82323;
+    color: #FFFFFF;
+    border: none;
+    padding: 10px;
+    font-size: 18px;
+    font-family: 'Inter', sans-serif;
+    border-radius: 5px;
+    cursor: pointer;
+    display: block;
+    margin: 20px auto 0 auto;
+}
+
+.cardapio a {
+    text-decoration: none;
+    color: #FFFFFF;
+}
+
